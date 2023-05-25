@@ -24,6 +24,6 @@ public class Blog {
     @Size(max = 300)
     private String body;
 
-//    @Column(columnDefinition="tinyint(1) default 1")
+@Column(columnDefinition = "varchar(20) not null check (isPublished ='false)")
     private boolean isPublished=false;
 }

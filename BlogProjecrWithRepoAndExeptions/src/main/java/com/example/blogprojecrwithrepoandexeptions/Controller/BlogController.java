@@ -40,7 +40,7 @@ public class BlogController {
 
         return ResponseEntity.status(200).body("");
     }
-    @GetMapping("/get-catogry/{id}")
+    @GetMapping("/get-catogry/{catogry}")
     public ResponseEntity getCoffeesByCatogry(@PathVariable String catogry){
         List<Blog> blogs=blogServices.getUserByCatogry(catogry);
         return ResponseEntity.status(200).body(blogs);
